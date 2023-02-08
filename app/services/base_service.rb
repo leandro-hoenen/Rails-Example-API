@@ -1,7 +1,7 @@
 class BaseService
 
     attr_accessor :connection, :channel
-    # automatically_recover (boolean, default: true): when false, will disable automatic network failure recovery 
+    # automatically_recover (boolean, default: true): when false, will disable automatic network failure recovery
     def initialize(automatically_recover = false)
       @connection = Bunny.new(automatically_recover: automatically_recover)
     end
